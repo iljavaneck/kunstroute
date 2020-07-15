@@ -20,6 +20,7 @@ body{
     position: fixed;
     background: transparent;
     z-index: 10;
+    transition: 0.4s ease-in-out;
 }
 
 #navigationBar.visible{
@@ -34,6 +35,7 @@ body{
 
 .logo{
     width: 250px;
+    transition: 0.4s ease-in-out;
 }
 
 .logo.visible{

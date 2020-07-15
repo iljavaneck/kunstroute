@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="home">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maastricht Kunst | Ontdek de mooiste kunst van Maastricht</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/png/shortcut@2x.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav id="navigationBar">
+        <div class="logo"><a href="#"><img id="logo" src="assets/svg/logoNavBar.svg"></a></div>
+        <ul class="nav-links">
+            <li><a href="#">Bekijk de Map</a></li>
+            <li><a href="#">Deelnemers</a></li>
+            <li><a href="#">Over ons</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div id="placeholder">
+
+    </div>
+    
+    
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/paroller.js/dist/jquery.paroller.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script>
+
+        var navLinks = document.querySelectorAll('.nav-links li');
+
+        $( document ).ready(function() {    
+            $('.burger').click(function(){
+                $('.burger').toggleClass('toggle');
+                $('.nav-links').toggleClass('nav-active');
+                $('.nav-links li').css({opacity: 1});
+                $('.nav-links li a').css("color", "#f0385a");
+                $('.nav-links li a').css("font-weight", "bold");
+            });
+            $(window).on("scroll", function() {
+            var scrollPos = $(window).scrollTop();
+            if (scrollPos > 70) {
+                $('#navigationBar').addClass('bgVisible');
+                $('.nav-links li a').addClass('visible')
+                $('.logo').addClass('visible')
+                $('#navigationBar').addClass('visible')
+
+            } else {
+                $('.navigation').removeClass('bgVisible');
+                $('.navigation ul li a').removeClass('visible')
+                $('.logo').removeClass('visible')
+                $('#navigationBar').removeClass('visible')
+            }
+            });
+
+            //zorgen dat er smooth gescrollt wordt:
+
+            $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+                window.location.hash = hash;
+            });
+            }
+            });
+           // $('.paralax').paroller(); 
+        });
+    
+    
+    
+    
+    </script>
+
+
+
+</body>
+
+</html>

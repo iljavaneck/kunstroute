@@ -13,7 +13,7 @@
 <body>
 
     <nav id="navigationBar">
-        <div class="logo"><a href="#"><img id="logo" src="assets/svg/logoNavBar.svg"></a></div>
+        <div class="logo"><a href="#"><img id="logo" src="assets/svg/logoNavBar_1.svg"></a></div>
         <ul class="nav-links">
             <li><a href="#">Bekijk de Map</a></li>
             <li><a href="#">Deelnemers</a></li>
@@ -25,6 +25,16 @@
             <div class="line3"></div>
         </div>
     </nav>
+
+    <header>
+        <img id="headerImageComplete" src="assets/png/headerComplete.png" alt="foto van maastricht tijdens zonsondergang"> 
+        <div class="pageTitle">
+            <div class="textContainer">
+                <h1>De mooiste kunst van Maastricht,<br>allemaal in één map.</h1>
+                <a class="cta" href="#">Bekijk de kaart<i id="arrow" class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
+    </header>
 
     <div id="placeholder">
 
@@ -51,16 +61,9 @@
             });
             $(window).on("scroll", function() {
             var scrollPos = $(window).scrollTop();
-            if (scrollPos > 70) {
-                $('#navigationBar').addClass('bgVisible');
-                $('.nav-links li a').addClass('visible')
-                $('.logo').addClass('visible')
-                $('#navigationBar').addClass('visible')
-
+            if (scrollPos > 100) {
+                $('#navigationBar').addClass('visible');
             } else {
-                $('.navigation').removeClass('bgVisible');
-                $('.navigation ul li a').removeClass('visible')
-                $('.logo').removeClass('visible')
                 $('#navigationBar').removeClass('visible')
             }
             });
@@ -78,7 +81,12 @@
             });
             }
             });
-           // $('.paralax').paroller(); 
+            $('.paralax').paroller(); 
+            $(".pageTitle").paroller({ factor: -0.1, type: 'foreground', direction: 'vertical' });
+            $("#headerImageComplete").paroller({ factor: 0.1, type: 'background', direction: 'vertical' });
+      
+        
+        
         });
     
     

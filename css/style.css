@@ -200,7 +200,7 @@ body{
     color: #fff;
     margin-left: 30vw;
     position: absolute;
-    top: 36vh;
+    top: 40vh;
 }
 
  /* scroll animatie */
@@ -373,13 +373,13 @@ body{
     .box{
     top: 22vh;
     }
-}
 #headerText h1{
     top: 12vh;
 }
 
 #headerText h2{
     top: 19vh;
+}
 }
 
 

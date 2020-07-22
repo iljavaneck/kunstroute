@@ -11,37 +11,66 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <div id="sitewrapper">
 
-    <nav id="navigationBar">
-        <div class="logo"><a href="#"><img id="logo" src="assets/svg/logoNavBar_1.svg"></a></div>
-        <ul class="nav-links">
-            <li><a href="#">Bekijk de Map</a></li>
-            <li><a href="#">Deelnemers</a></li>
-            <li><a href="#">Over ons</a></li>
-        </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-    </nav>
 
-    <header>
-        <img id="headerImageComplete" src="assets/png/headerComplete.png" alt="foto van maastricht tijdens zonsondergang"> 
-        <div class="pageTitle">
-            <div class="textContainer">
-                <h1>De mooiste kunst van Maastricht,<br>allemaal in één map.</h1>
-                <a class="cta" href="#">Bekijk de kaart<i id="arrow" class="fa fa-angle-right"></i></a>
+
+        <nav id="navigationBar">
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Kaart</a></li>
+                <li><a href="#">Deelnemers</a></li>
+            </ul>
+            <div class="logo"><a href="#"><img id="logo" src="assets/svg/logoNavBarWhite.svg"></a></div>
+            <ul class="nav-links">
+                <li><a href="#">Flyer</a></li>
+                <li><a href="#">Over ons</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div id="menuToggle">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu">
+                      <a href="#"><li>Home</li></a>
+                      <a href="#"><li>Kaart</li></a>
+                      <a href="#"><li>Deelnemers</li></a>
+                      <a href="#"><li>Flyer</li></a>
+                      <a href="#"><li>Over Ons</li></a>
+                      <a href="#"><li>Contact</li></a>
+                    </ul>
             </div>
-        </div>
-    </header>
+        </nav>
 
-    <div id="placeholder">
+        <header>
+            <div id="headerContent">
+                    <img src="assets/svg/headerBG.svg" alt="abstract vector art">
+            
+                <div id="headerText">
+                    <h1>De mooiste kunst.</h1>
+                    <h2>Die maastricht te bieden heeft.</h2>
+                    <div class="box">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+
+        <main>
+            <div id="content">
+
+            </div>
+
+        </main>
+
 
     </div>
-    
-</div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -51,22 +80,21 @@
     <script>
 
         var navLinks = document.querySelectorAll('.nav-links li');
-        var mq = window.matchMedia( "(min-width: 600px)" );
+        var initialSrc = "assets/svg/logoNavBar_1.svg";
+        var scrollSrc = "assets/svg/logoNavBarWhite.svg";
 
-        $( document ).ready(function() {    
-            $('.burger').click(function(){
-                $('.burger').toggleClass('toggle');
-                $('.nav-links').toggleClass('nav-active');
-                $('.nav-links li').css({opacity: 1});
-                $('.nav-links li a').css("color", "#cd001f");
-                $('.nav-links li a').css("font-weight", "600");
-            });
+
+        $( document ).ready(function() {
             $(window).on("scroll", function() {
             var scrollPos = $(window).scrollTop();
             if (scrollPos > 10) {
                 $('#navigationBar').addClass('visible');
+                $('.nav-links li a').css("color", "#1E2334");
+                $("#logo").attr("src", initialSrc);
             } else {
                 $('#navigationBar').removeClass('visible')
+                $("#logo").attr("src", scrollSrc);
+                $('.nav-links li a').css("color", "#fff");
             }
             });
 
@@ -84,19 +112,14 @@
             }
             });
 
-            if (mq.matches){
-                $('.paralax').paroller(); 
-                $(".pageTitle").paroller({ factor: -0.2, type: 'foreground', direction: 'vertical' });
-                $("#headerImageComplete").paroller({ factor: 0.1, type: 'background', direction: 'vertical' });
-            } else {
-                $('.paralax').paroller(); 
-                $(".pageTitle").paroller({ factor: -0.01, type: 'foreground', direction: 'vertical' });
-                $("#headerImageComplete").paroller({ factor: 0.01, type: 'background', direction: 'vertical' });       
-            }
-       
-        
-        
-        });
+            $("#button").click(function(){
+                $(".card").toggleClass("hidden");
+                $(".cards").toggleClass("hidden");
+            });
+
+        });      
+
+            
     
     
     

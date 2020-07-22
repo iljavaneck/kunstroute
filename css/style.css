@@ -35,6 +35,7 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 9vh;
     min-height: 9vh;
     width: 100%;
     top: 0;
@@ -47,6 +48,8 @@ body{
 
 #navigationBar.visible{
     opacity: 1;
+    height: 9vh;
+    width: 100vw;
     transition: 0.2s ease-out;
     background-color: #fff;
     box-shadow: 0 10px 12px -14px rgba(0,0,0,.29);
@@ -397,10 +400,6 @@ body{
 
 @media screen and (max-width: 768px){
 
-    #sitewrapper{
-        overflow-x: hidden;
-    }
-
     #logo{
         width: 220px;
     }
@@ -434,6 +433,19 @@ body{
         margin-top: -2px;
         width: 100vw;
         left: 0;
+    }
+
+    #sitewrapper{
+        overflow-x: hidden;
+    }
+
+    #navigationBar{
+        background: #fff;
+        box-shadow: 10px 10px 12px -14px rgba(0,0,0,.29);
+    }
+
+    #logo{
+        width: 170px;
     }
 
 }
@@ -483,6 +495,13 @@ body{
         width: 100vw;
         margin-left: 0;
     }
+
+    #logo{
+        width: 150px;
+    }
+
+
+
 }
 
 

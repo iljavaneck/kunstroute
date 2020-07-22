@@ -397,6 +397,10 @@ body{
 
 @media screen and (max-width: 768px){
 
+    #sitewrapper{
+        overflow-x: hidden;
+    }
+
     #logo{
         width: 220px;
     }

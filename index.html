@@ -19,12 +19,12 @@
         <nav id="navigationBar">
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Kaart</a></li>
+                <li><a href="#map">Kaart</a></li>
                 <li><a href="#">Deelnemers</a></li>
             </ul>
             <div class="logo"><a href="#"><img id="logo" src="assets/svg/logoNavBarWhite.svg"></a></div>
             <ul class="nav-links">
-                <li><a href="#">Flyer</a></li>
+                <li><a href="#flyer">Flyer</a></li>
                 <li><a href="#">Over ons</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -35,9 +35,9 @@
                     <span></span>
                     <ul id="menu">
                       <a href="#"><li>Home</li></a>
-                      <a href="#"><li>Kaart</li></a>
+                      <a href="#map"><li>Kaart</li></a>
                       <a href="#"><li>Deelnemers</li></a>
-                      <a href="#"><li>Flyer</li></a>
+                      <a href="#flyer"><li>Flyer</li></a>
                       <a href="#"><li>Over Ons</li></a>
                       <a href="#"><li>Contact</li></a>
                     </ul>
@@ -64,6 +64,52 @@
 
         <main>
             <div id="content">
+
+                <div id="map">
+                    <h4>Vind het allemaal<br>In één handig overzicht.</h4>
+                    <div id="googleMap">
+                        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=18PvgCC3xV1-q1P5EiotCWagj0cEha1vk" width="640" height="480" zoom="14" frameBorder="0" style="border:0"></iframe>
+                    </div>
+                </div>
+                
+
+                <div id="info">
+                    <div id="infoLeft">
+                        <p>Meer dan</p>
+                        <p id="infoBigNumber">25</p>
+                        <p id="infoSub">Deelnemers</p>
+                        <p>Alle soorten kunst zijn te vinden tussen de vele diverse kunstenaars en galerieën.</p>
+                        <a href="#">Bekijk de deelnemers<i id="arrow" class="fa fa-angle-right"></i></a>
+                    </div>
+                    <div id="infoRight">
+                        <h3>Kunst voor <span id="underline">iedereen.</span></h3>
+                        <p>Op de kunstroute vindt u allerlei verschillende disciplines van kunst, waardoor er voor vrijwel iedereen wel een interessante looproute samen valt stellen. Gebruik in het plannen van uw reis onze interactieve kaart om meteen aanwijzingen te krijgen naar alle locaties!</p>
+                    </div>
+                </div>
+
+                <div id="flyer">
+                    <div id="flyerLeft">
+                            <img src="assets/png/flyer@2x.png" alt="Foto van de flyer kunstroute maastricht 2020">
+                    </div>
+                    <div id="flyerRight">
+                        <p>2020</p>
+                        <h5>Kunstroute<br>flyer.</h5>
+                        <p>Liever de papieren versie van de kaart met alle deelnemers?
+                            Dan kunt u gratis de flyer downloaden en uitprinten!</p>
+                        <div id="whiteLine"></div>
+                        <a href="assets/downloads/flyer.pdf" download="Maastricht kunst flyer">Download gratis</a>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
 
             </div>
 

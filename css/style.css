@@ -24,7 +24,7 @@ body{
 
 ::selection{
     background-color: #CD001F;
-    color: #000;
+    color: #fff;
 }
 
 .clear{
@@ -251,9 +251,22 @@ body{
 
   /* google map*/
 
+#map{
+    margin-top: 20vh;
+  }
+
+#map h4{
+    font-size: 35px;
+    line-height: 54px;
+    font-weight: bold;
+    color: #1E2334;
+    margin-left: 10%;
+    margin-bottom: 30px;
+}
+
 #googleMap{   
     position: relative;
-    padding-bottom: 56%;
+    padding-bottom: 40%;
     height: 0;
     overflow: hidden;
 }
@@ -261,15 +274,168 @@ body{
 #googleMap iframe {
     position: absolute;
     top: -55px;
-    right: 0;
-    width: 100% !important;
-    height: 60% !important;
+    right: 10%;
+    width: 80% !important;
+    height: 100% !important;
 }
  
+/* informatie onder de kaart */
+
+#info{
+    display: flex;
+    width: 80%;
+    margin-left: 10%;
+}
+
+#infoLeft{
+    width: 40%;
+    color: #1E2334;
+}
+
+#infoLeft p{
+    font-size: 20px;
+    line-height: 30px;
+}
+
+#infoBigNumber{
+    font-size: 160px !important;
+    line-height: 30px !important;
+    font-weight: 400;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+#infoLeft p:nth-child(3){
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#infoLeft p:nth-child(4){
+    width: 300px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#infoLeft a{
+    color: #CD001F;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+}
+
+#infoLeft i{
+    margin-left: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+#infoLeft a:hover > i{
+    transform: translateX(10px);
+    transition: 0.2s ease-in-out;
+}
 
 
+#infoRight{
+    width: 60%;
+    height: 400px;
+    border-left: 1px solid #1E2334;
+    color: #1E2334;
+}
 
+#infoRight h3{
+    font-size: 40px;
+    font-weight: bold;
+    padding: 70px 0px 0px 60px;
+}
 
+#infoRight p{
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 60px;
+    margin-top: 40px;
+    font-weight: 400;
+    width: 500px;
+}
+
+#underline{
+    text-decoration: underline;
+    text-decoration-color: #CD001F;
+}
+
+#flyer{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    margin-top: 120px;
+    color: #1E2334;
+}
+
+#flyerLeft{
+    width: 50vw;
+    height: 50vw;
+    background-color: #1E2334;
+}
+
+#flyerLeft img{
+    width: 55vw;
+    margin-left: -5vw;
+    margin-top: 2vw;
+}
+
+#flyerRight{
+    width: 40vw;
+    height: 56vw;
+    margin-top: -6vw;
+    background-color: #CD001F;
+    color: #FDE3E7;
+}
+
+#flyerRight p:nth-child(1){
+    color: #fff;
+    font-size: 80px;
+    font-weight: 600;
+    margin: 10vw 0 0 5vw;
+}
+
+#flyerRight h5{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 40px;
+    margin: 2vw 0 0 5vw;
+}
+
+#flyerRight h5::selection , #flyerRight p::selection{
+    background-color: #fff;
+    color: #CD001F;
+}
+
+#flyerRight p{
+    font-size: 18px;
+    line-height: 27px;
+    width: 280px;
+    margin: 3.5vw 0 0 5vw;
+}
+
+#whiteLine{
+    border-bottom: 2px solid #fff;
+    width: 7.7vw;
+    margin: 5vw 0vw 7vw 5vw;
+}
+
+#flyerRight a{
+    border: 4px solid #fff;
+    background-color: #CD001F;
+    padding: 18px 36px;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 5vw;
+}
+
+#flyerRight a:hover{
+    border: 4px solid #fff;
+    background-color: #fff;
+    color: #CD001F;
+}
 
 
 
@@ -310,9 +476,27 @@ body{
     }
 }
 
+@media screen and (max-width: 1350px){
+    #infoRight p{
+        width: 470px;
+    }
+        
+}
+
 @media screen and (max-width: 1330px){
     .box{
         top: 35vh;
+    }
+}
+
+@media screen and (max-width: 1258px){
+    #infoRight h3{
+        font-size: 30px;
+        padding: 60px 0px 0px 40px;
+    }
+    #infoRight p{
+        padding-left: 40px;
+        margin-top: 40px;
     }
 }
 
@@ -329,11 +513,66 @@ body{
         top: 25vh;
         font-size: 20px;
     }
+
+    #infoLeft{
+        width: 45%;
+    }
+    #infoRight{
+        width: 50%;
+    }
+
+    #infoRight p{
+        font-size: 18px;
+        line-height: 27px;
+        width: 400px;
+    }
 }
 
 @media screen and (max-width: 1120px){
     .nav-links{
         width: 60%;
+    }
+
+    #googleMap{
+        padding-bottom: 50%;
+    }
+
+    #infoRight h3{
+        padding-left: 30px;
+    }
+
+    #infoRight p{
+        padding-left: 30px;
+    }
+
+    #flyerRight p:nth-child(1){
+        margin: 10vw 0 0 2vw;
+    }
+    
+    #flyerRight h5{
+        margin: 2vw 0 0 2vw;
+    }
+    
+    #flyerRight p{
+        margin: 3.5vw 0 0 2vw;
+    }
+    
+    #whiteLine{
+        margin: 5vw 0vw 7vw 2vw;
+    }
+    
+    #flyerRight a{
+        margin-left: 2vw;
+    }
+}
+
+@media screen and (max-width: 1085px){
+    #infoLeft{
+        width: 100%;
+    }
+
+    #infoRight{
+        width: 100%;
     }
 }
 
@@ -357,6 +596,60 @@ body{
   }
 }
 
+@media screen and (max-width: 1015px){
+    #info{
+        flex-direction: column;
+    }
+
+    #infoLeft{
+        padding-bottom: 70px;
+    }
+
+
+    #infoLeft p:nth-child(4){
+        width: 70vw;
+    }
+
+    #infoRight{
+        border-left: none;
+        border-top: 2px solid #1E2334;
+    }
+
+    #infoRight h3{
+        padding-left: 0;
+    }
+
+    #infoRight p{
+        width: 70vw;
+        padding: 0;
+    }
+
+    #flyer{
+        margin-top: unset;
+    }
+
+    #flyerRight p:nth-child(1){
+        font-size: 60px;
+        margin-top: 5vw;
+    }
+
+    #flyerRight h5{
+        font-size: 25px;
+        line-height: 32px;
+    }
+
+    #flyerRight p{
+        font-size: 16px;
+        line-height: 24px;
+        width: 240px;
+    }
+    
+    #flyerRight{
+        width: 30vw;
+    }
+
+}
+
 @media screen and (max-width: 950px){
     .box{
         top: 26vh;
@@ -372,6 +665,16 @@ body{
     }
 }
 
+@media screen and (max-width: 900px){
+    #flyerRight p{
+        width: 200px;
+    }
+
+    #whiteLine{
+        margin: 4vw 0vw 6vw 2vw;
+    }
+}
+
 @media screen and (max-width: 840px){
     .box{
     top: 22vh;
@@ -383,6 +686,34 @@ body{
 #headerText h2{
     top: 19vh;
 }
+
+#googleMap{
+    padding-bottom: 60%;
+}
+}
+
+@media screen and (max-width: 800px){
+    #flyerRight p:nth-child(1){
+        font-size: 50px;
+        margin-top: 5vw;
+    }
+
+    #flyerRight h5{
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    #flyerRight p{
+        font-size: 16px;
+        line-height: 24px;
+        width: 200px;
+    }
+
+    #flyerRight a{
+        border: 3px solid;
+        padding: 12px 30px;
+    }
+
 }
 
 
@@ -448,21 +779,173 @@ body{
         width: 170px;
     }
 
+    #map{
+        margin-top: 0;
+    }
+
+    #map h4{
+        padding-top: 120px;
+        font-size: 25px;
+        line-height: 37px;
+    }
+
+    #flyer{
+        width: 100%;
+    }
+
+    #flyerLeft{
+        width: 60vw;
+        height: 60vw;
+    }
+
+    #flyerLeft img{
+        margin: unset;
+        margin-top: 7vw;
+        margin-left: 2vw;
+        width: 57vw;
+    }
+
+    #flyerRight{
+        width: 40vw;
+        height: 66vw;
+    }
+
+    #flyerRight p:nth-child(1){
+        font-size: 70px;
+        margin-top: 10vw;
+        margin-left: 10%;
+    }
+
+    #flyerRight h5{
+        margin-left: 10%;
+        font-size: 30px;
+        line-height: 32px;
+        margin-top: 3vw;
+    }
+
+    #flyerRight p{
+        font-size: 16px;
+        line-height: 24px;
+        width: 220px;
+        margin-left: 10%;
+    }
+
+    #whiteLine{
+        margin-left: 10%;
+        margin-top: 3vw;
+        margin-bottom: 6vw;
+    }
+    
+    #flyerRight a{
+        margin-left: 10%;
+    }
+
 }
+
+@media screen and (max-width: 700px){
+    #flyer{
+        flex-direction: column-reverse;
+        
+    }
+
+    #flyerLeft{
+        width: 100vw;
+    }
+
+    #flyerLeft img{
+        margin: unset;
+        margin-top: 3vw;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        width: 70vw;
+    }
+
+    #flyerRight{
+        width: 100vw;
+        height: 64vw;
+    }
+
+    #flyerRight p:nth-child(1){
+        font-size: 70px;
+        margin-top: 10vw;
+        margin-left: 10%;
+    }
+
+    #flyerRight h5{
+        margin-left: 10%;
+        font-size: 30px;
+        line-height: 32px;
+        margin-top: 3vw;
+    }
+
+    #flyerRight p{
+        font-size: 16px;
+        line-height: 24px;
+        width: 70vw;
+        margin-left: 10%;
+    }
+
+    #whiteLine{
+        margin-left: 10%;
+        margin-top: 6vw;
+        margin-bottom: 9vw;
+    }
+    
+    #flyerRight a{
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 687px){
+    #flyerRight{
+        height: 66vw;
+    }
+}
+
 
 @media screen and (max-width: 600px){
     #headerText h1{
-        top: 13vh;
+        top: 17vh;
         font-size: 40px;
     }
 
     #headerText h2{
-        top: 19vh;
+        top: 24vh;
         font-size: 16px;
     }
 
     .box{
-        top: 25vh;
+        top: 30vh;
+    }
+    #map h4{
+        text-align: center;
+        margin-left: 0;
+    }
+
+    #flyerRight{
+        height: 75vw;
+    }
+
+    #flyerLeft{
+        height: 70vw;
+    }
+
+    #flyerLeft img{
+        margin-top: 8vw;
+    }
+}
+
+@media screen and (max-width: 529px){
+    #flyer{
+        margin-top: 7vh;
+    }
+
+    #flyerRight{
+        height: 60vh;
+    }
+
+    #flyerRight p:nth-child(1){
+        margin-top: 10vh;
     }
 }
 
@@ -487,6 +970,26 @@ body{
     #logo{
         margin-left: -100px;
     }
+
+    #googleMap{
+        padding-bottom: 100%;
+    }
+
+    .neVct-IlgHgd .HzV7m-b0t70b-haAclf{
+        width: 250px;
+    }
+
+    #featurecardPanel{
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 450px){
+
+    #googleMap iframe {
+        width: 100% !important;
+        right: 0;
+    }
 }
 
 @media screen and (max-width: 408px){
@@ -498,6 +1001,19 @@ body{
 
     #logo{
         width: 150px;
+    }
+
+    #infoRight h3{
+        font-size: 25px;
+    }
+
+    #info p{
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    #infoRight p{
+        margin-top: 30px;
     }
 
 

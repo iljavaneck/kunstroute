@@ -6,7 +6,7 @@ body{
 #sitewrapper{
     position: relative;
     background-color: #f4f4f4;
-    height: 4000px;
+    height: 6000px;
 }
 
 #content{
@@ -437,6 +437,136 @@ body{
     color: #CD001F;
 }
 
+#deelnemers{
+    position: relative;
+    width: 750px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 65vw;
+}
+
+#deelnemers h4{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#redLineDeelnemers{
+    width: 60px;
+    border-bottom: 4px solid #CD001F;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#deelnemers p{
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.gallery {
+	display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: -1rem -1rem;
+    margin-top: 4vw;
+    width: 80%;
+    margin-left: 10%;
+    transition: ease-in-out 0.6s;
+}
+
+.gallery-item {
+	/* Minimum width of 24rem and grow to fit available space */
+    flex: 1 0 16rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+    overflow: hidden;
+    transition: ease-in-out 0.6s;
+}
+
+.gallery-item h6{
+    padding: 10px 15px;
+    
+}
+
+.gallery-image {
+	display: block;
+    width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.05);
+}
+
+#button{
+    color: #1E2334;
+    border: 3px solid #1E2334;
+    font-family:'Poppins', sans-serif;
+    font-size: 16px;
+    padding: 14px 28px;
+    background-color: #fff;
+    transition: 0.2s ease-in-out;
+    position: relative;
+    left: 50%;
+    margin-top: 4vw;
+    transform: translateX(-50%);
+}
+
+#button:hover{
+    color: #fff;
+    background-color: #1E2334;
+    transition: 0.2s ease-in-out;
+}
+
+.gallery.hidden > .gallery-item:nth-child(1n +5){
+    transition: ease-in-out 0.6s;
+    opacity: 0;
+    height: 0;
+}
+
+
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+        margin: 0;
+        transition: ease-in-out 0.6s;
+    }
+    
+    .gallery{
+        margin-top: 4vw;
+        width: 80%;
+        margin-left: 10%;
+        transition: ease-in-out 0.6s;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -450,8 +580,17 @@ body{
 
 
 
+@media screen and (max-width: 1749px){
+    .gallery.hidden > .gallery-item:nth-child(1n +4){
+        transition: ease-in-out 0.6s;
+        opacity: 0;
+        height: 0;
+    }
 
-
+    #button{
+        margin-top: 1vw;
+    }
+}
 
 @media screen and (max-width: 1600px){
     .box{
@@ -487,6 +626,17 @@ body{
     .box{
         top: 35vh;
     }
+}
+
+@media screen and (max-width: 1299px){
+    .gallery.hidden > .gallery-item:nth-child(1n +3){
+        transition: ease-in-out 0.6s;
+        opacity: 0;
+        height: 0;
+    }
+
+
+
 }
 
 @media screen and (max-width: 1258px){
@@ -648,6 +798,13 @@ body{
         width: 30vw;
     }
 
+    #deelnemers p{
+        font-size: 18px;
+        line-height: 27px;
+        width: 60%;
+        margin-left: 20%;
+    }
+
 }
 
 @media screen and (max-width: 950px){
@@ -663,6 +820,36 @@ body{
         top: 22vh;
         font-size: 18px;
     }
+
+    #deelnemers{
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+    }
+    
+    #deelnemers h4{
+        font-size: 25px;
+        line-height: 37px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    #redLineDeelnemers{
+        width: 60px;
+        border-bottom: 4px solid #CD001F;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    #deelnemers p{
+        font-size: 18px;
+        line-height: 27px;
+        width: 80%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 @media screen and (max-width: 900px){
@@ -673,6 +860,15 @@ body{
     #whiteLine{
         margin: 4vw 0vw 6vw 2vw;
     }
+
+
+}
+
+@media screen and (max-width: 849px){
+    .gallery {
+		grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+
+	}
 }
 
 @media screen and (max-width: 840px){
@@ -840,6 +1036,11 @@ body{
         margin-left: 10%;
     }
 
+    .gallery.hidden > .gallery-item:nth-child(1n +4){
+        transition: ease-in-out 0.6s;
+        opacity: 0;
+        height: 0;
+    }
 }
 
 @media screen and (max-width: 700px){
@@ -894,6 +1095,10 @@ body{
     #flyerRight a{
         margin-left: 10%;
     }
+
+    #deelnemers{
+        margin-top: 130vw;
+    }
 }
 
 @media screen and (max-width: 687px){
@@ -933,6 +1138,12 @@ body{
     #flyerLeft img{
         margin-top: 8vw;
     }
+
+    #deelnemers{
+        margin-top: 150vw;
+    }
+
+
 }
 
 @media screen and (max-width: 529px){
@@ -946,6 +1157,10 @@ body{
 
     #flyerRight p:nth-child(1){
         margin-top: 10vh;
+    }
+
+    #deelnemers{
+        margin-top: 170vw;
     }
 }
 
@@ -982,6 +1197,28 @@ body{
     #featurecardPanel{
         width: 250px;
     }
+
+    #deelnemers{
+        margin-top: 180vw;
+    }
+
+    #deelnemers h4{
+        font-size: 20px;
+    }
+
+    #redLineDeelnemers{
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+    }
+
+    #deelnemers p{
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .gallery{
+        margin-top: 10vw;
+    }
 }
 
 @media screen and (max-width: 450px){
@@ -989,6 +1226,30 @@ body{
     #googleMap iframe {
         width: 100% !important;
         right: 0;
+    }
+
+    #deelnemers{
+        margin-top: 190vw;
+    }
+
+    #deelnemers h4{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 439px){
+    .gallery.hidden > .gallery-item:nth-child(1n +2){
+        transition: ease-in-out 0.6s;
+        opacity: 0;
+        height: 0;
+    }
+
+    #button{
+        position: absolute;
+    }
+
+    .gallery.hidden ~  #button{
+        margin-top: -40vw;
     }
 }
 
@@ -1016,11 +1277,25 @@ body{
         margin-top: 30px;
     }
 
+    #deelnemers{
+        margin-top: 200vw;
+    }
+
+}
+
+@media screen and (max-width: 408px){
+    #deelnemers{
+        margin-top: 210vw;
+    }
 
 
 }
 
-
+@media screen and (max-width: 360px){
+    #deelnemers{
+        margin-top: 220vw;
+    }
+}
 
 
 

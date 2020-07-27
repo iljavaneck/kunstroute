@@ -1322,6 +1322,10 @@ body{
         height: 55vw;
     }
 
+    #overLeftContent{
+        margin-left: 10%;
+    }
+
     #overRight{
         width: 100vw;
     }
@@ -1331,6 +1335,7 @@ body{
         transform: translateY(-130%);
         width: 80vw;
         color: #fff;
+        margin-left: 10%;
     }
 
     #facts{
@@ -1525,6 +1530,16 @@ body{
     #overRight p{
         transform: translateY(-60%);
     }
+
+    #fact:nth-of-type(3){
+        margin-right: 10vw;
+        margin-top: 5vw;
+    }
+
+
+    #overLeft{
+        height: 100vw;
+    }
 }
 
 @media screen and (max-width: 439px){
@@ -1555,15 +1570,6 @@ body{
 
     #overRight p{
         transform: translateY(-70%);
-    }
-
-    #fact:nth-of-type(3){
-        margin-right: 10vw;
-        margin-top: 5vw;
-    }
-
-    #overLeft{
-        height: 100vw;
     }
 
     #overRight{

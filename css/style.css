@@ -1,21 +1,21 @@
 body{
     font-family: 'Poppins', sans-serif;
     word-break: break-word;
+    background-color: #f4f4f4;
 }
 
 #sitewrapper{
     position: relative;
-    background-color: #f4f4f4;
-    height: 6000px;
 }
 
 #content{
     position: absolute;
     background-color: #fff;
     width: 80vw;
-    height: 5000px;
+    height: auto;
     margin-top: -33%;
     left: 10vw;
+    z-index: 3;
 }
 
 *:focus {
@@ -636,7 +636,7 @@ body{
     width: 50vw;
     height: 50vw;
     background-color: #1E2334;
-    color: #FDE3E7;
+    color: #fff;
 }
 
 #overRight p{
@@ -650,9 +650,108 @@ body{
     transform: translateY(-50%);
 }
 
+#cta{
+    width: 620px;
+    margin: 0 auto;
+    margin-top:9vw;
+}
+
+#cta h5{
+    font-weight: 600;
+    font-size: 40px;
+    padding-bottom: 200px;
+}
+
+#cta a{
+    color: #CD001F;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 14px 36px;
+    border: 4px solid #CD001F;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -10vw;
+    
+}
+
+#cta a:hover{
+    background-color: #CD001F;
+    color: #fff;
+}
 
 
 
+#footer{
+    position: absolute;
+    height: 60vh;
+    width: 100vw;
+    background-color: #79899F;
+    margin-left: -10vw;
+}
+
+#white{
+    width: 80vw;
+    margin-left: 10vw;
+    height: 150px;
+    background: #fff;
+}
+
+#footerContent{
+    display: flex;
+    width: 75vw;
+    margin-left: 12.5vw;
+    margin-top: 10vh;
+    color: #1E2334;
+}
+
+#image{
+    margin-right: 70px;
+}
+
+#navigeer{
+    margin-right: 100px;
+}
+
+#footerContent p:nth-child(1){
+    font-weight: 600;
+    border-bottom: 2px solid #CD001F;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #1E2334;
+}
+
+#footerContent ul li{
+    margin-bottom: 20px;
+}
+
+#footerContent ul li a{
+    text-decoration: none;
+    color: #1E2334;
+}
+
+#footerContent ul li a:hover{
+    text-decoration: underline #1E2334;
+}
+
+#contact{
+    margin-right: 100px;
+}
+
+#bottom{
+    position: absolute;
+    width: 100vw;
+    height: 8vh;
+    background: #1E2334;
+    margin-left: -10vw;
+    margin-top: 60vh;
+}
+
+#bottom p{
+    color: #79899F;
+    margin-left: 12.5vw;
+    margin-top: 3vh;
+}
 
 
 
@@ -715,6 +814,10 @@ body{
     #overRight p{
         width: 450px
     }
+
+    #cta a {
+        margin-top: -10vw;
+    }
 }
 
 @media screen and (max-width: 1350px){
@@ -737,7 +840,9 @@ body{
         height: 0;
     }
 
-
+    #cta a {
+        margin-top: -12vw;
+    }
 
 }
 
@@ -801,6 +906,14 @@ body{
     #overLeftContent{
         margin-left: 2vw;
     }
+
+    #cta a {
+        margin-top: -14vw;
+    }
+
+    #navigeer , #contact{
+        margin-right: 4vw;
+    }
 }
 
 @media screen and (max-width: 1120px){
@@ -838,6 +951,15 @@ body{
     
     #flyerRight a{
         margin-left: 2vw;
+    }
+
+    #cta h5{
+        font-size: 35px;
+        margin-left: 5vw;
+    }
+
+    #cta a {
+        margin-top: -15vw;
     }
 }
 
@@ -900,6 +1022,18 @@ body{
         font-size: 50px;
         line-height: 60px;
         margin-bottom: unset;
+    }
+
+    #cta a {
+        margin-top: -16vw;
+    }
+
+    #image img{
+        width: 18vw;
+    }
+
+    #image{
+        margin-right: 3vw;
     }
 }
 
@@ -1007,6 +1141,10 @@ body{
         margin-left: 50%;
         transform: translateX(-50%);
     }
+
+    #cta a {
+        margin-top: -18vw;
+    }
 }
 
 @media screen and (max-width: 900px){
@@ -1033,6 +1171,42 @@ body{
     #fact{
         height: 65px;
     }
+
+    #cta h5{
+        font-size: 30px;
+        margin-left: 10vw;
+        padding-bottom: 200px;
+    }
+
+    #cta a {
+        margin-top: -20vw;
+    }
+
+    #footerContent{
+        flex-wrap: wrap;
+        margin-top: 4vh;
+        justify-content: space-between;
+    }
+
+    #image{
+        width: 100vw;
+    }
+
+    #image img{
+        width: 200px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #navigeer, #contact , #volg{
+        margin-top: 4vh;
+    }
+
+
+
+
+
+
 }
 
 @media screen and (max-width: 849px){
@@ -1255,6 +1429,38 @@ body{
         margin-left: 4vw;
         margin-top: 6vw;
     }
+
+    #cta{
+        margin-top: 0vw;
+        text-align:center;
+        width: 100vw;
+        height: 30vw;
+        background-color: #fff;
+    }
+
+    #cta h5{
+        margin-left: unset;
+        margin-top: 10vw;
+    }
+
+    #cta a {
+        margin-top: -20vw;
+    }
+
+    #white{
+        display: none;
+    }
+    #footer{
+        width: 100vw;
+        margin-left: 0;
+    }
+    #bottom{
+        margin-left:0;
+    }
+
+    #navigeer,  #contact , #volg{
+        margin-top: 7vh;
+    }
 }
 
 @media screen and (max-width: 700px){
@@ -1357,6 +1563,61 @@ body{
     }
 }
 
+@media screen and (max-width: 625px){
+
+    #cta h5{
+        position: absolute;
+        width: 90vw;
+        margin-left: 5%;
+    }
+
+    #cta a{
+        margin-top: 20vw;
+    }
+
+    #cta{
+        height: 30vh;
+    }
+
+    #footerContent{
+        flex-direction: column;
+        text-align: center;
+        width: 100vw;
+        margin-left: 0;
+    }
+
+    #image{
+        display: flex;
+        align-content: center;
+    }
+
+    #navigeer , #contact , #volg{
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 5vh;
+    }
+
+    #footer{
+        height: 80vh;
+    }
+
+    #bottom{
+        margin-top: 80vh;
+    }
+
+    #bottom p{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #footerContent p:nth-child(1){
+        border-bottom: none;
+        margin-bottom: 10px;
+    }
+
+
+}
+
 
 @media screen and (max-width: 600px){
     #headerText h1{
@@ -1422,6 +1683,10 @@ body{
 
     #overRight p{
         transform: translateY(-100%);
+    }
+
+    #cta h5{
+        font-size: 25px;
     }
 }
 
@@ -1498,6 +1763,10 @@ body{
     #overLeft{
         height: 70vw;
     }
+
+    #bottom p{
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 450px){
@@ -1540,6 +1809,18 @@ body{
     #overLeft{
         height: 100vw;
     }
+
+    #cta{
+        height: 60vw;
+    }
+
+    #cta h5{
+        margin-top: 15vw;
+    }
+
+    #cta a {
+        margin-top: 28vw;
+    }
 }
 
 @media screen and (max-width: 439px){
@@ -1561,6 +1842,14 @@ body{
         margin-top: 120px;
     }
 
+    #overRight{
+        height: 100vw;
+    }
+
+    #cta h5{
+        font-size: 20px;
+    }
+
 }
 
 @media screen and (max-width: 420px){
@@ -1570,10 +1859,6 @@ body{
 
     #overRight p{
         transform: translateY(-70%);
-    }
-
-    #overRight{
-        height: 100vw;
     }
 
     #overRight p{
@@ -1611,6 +1896,14 @@ body{
 
     #overRight{
         height: 120vw;
+    }
+
+    #cta a{
+        width: 40%;
+    }
+
+    #bottom p{
+        font-size: 12px;
     }
 
 }

@@ -227,20 +227,13 @@
 
     </div>
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" async></script>
-    <script src="js/lazysizes.min.js" defer></script>
-    <script src='https://kit.fontawesome.com/a076d05399.js' defer></script>
+    <noscript>Sorry, uw browser ondersteunt geen javascript, overweeg een andere browser zoals google chrome!</noscript>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-
-        var navLinks = document.querySelectorAll('.nav-links li');
-        var initialSrc = "assets/svg/logoNavBar_1.svg";
-        var scrollSrc = "assets/svg/logoNavBarWhite.svg";
-
-
-        $( document ).ready(function() {
             $(window).on("scroll", function() {
-            var scrollPos = $(window).scrollTop();
+                var initialSrc = "assets/svg/logoNavBar_1.svg";
+                var scrollSrc = "assets/svg/logoNavBarWhite.svg";
+                var scrollPos = $(window).scrollTop();
             if (scrollPos > 10) {
                 $('#navigationBar').addClass('visible');
                 $('.nav-links li a').css("color", "#1E2334");
@@ -270,15 +263,17 @@
                 $(".gallery").toggleClass("hidden");
             });
 
+    </script>
 
-        });      
+    <script src="js/lazysizes.min.js" defer></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' defer></script>
 
             
     
     
     
     
-    </script>
+
 
 
 

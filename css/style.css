@@ -376,9 +376,9 @@ body{
 }
 
 #flyerLeft img{
-    width: 55vw;
-    margin-left: -5vw;
-    margin-top: 2vw;
+    width: 90vw;
+    margin-left: -25vw;
+    margin-top: -13vw;
 }
 
 #flyerRight{
@@ -1360,9 +1360,9 @@ body{
 
     #flyerLeft img{
         margin: unset;
-        margin-top: 7vw;
-        margin-left: 2vw;
-        width: 57vw;
+        margin-top: -13vw;
+        margin-left: -20vw;
+        width: 100vw;
     }
 
     #flyerRight{
@@ -1474,10 +1474,10 @@ body{
 
     #flyerLeft img{
         margin: unset;
-        margin-top: 3vw;
+        margin-top: -10vw;
         margin-left: 50%;
         transform: translateX(-50%);
-        width: 70vw;
+        width: 100vw;
     }
 
     #flyerRight{
@@ -1644,10 +1644,6 @@ body{
 
     #flyerLeft{
         height: 70vw;
-    }
-
-    #flyerLeft img{
-        margin-top: 8vw;
     }
 
     #deelnemers{

@@ -45,7 +45,7 @@
 
         <header>
             <div id="headerContent">
-                    <img src="assets/svg/headerBG.svg" alt="abstract vector art met de kleuren van de maastricht kunst en kunst in maastricht">
+                    <img cache-control:public, max-age=31536000 src="assets/svg/headerBG.svg" alt="abstract vector art met de kleuren van de maastricht kunst en kunst in maastricht">
             
                 <div id="headerText">
                     <h1>De mooiste kunst.</h1>
@@ -221,10 +221,6 @@
             </div>
         </main>
 
-
-
-
-
     </div>
 
     <noscript>Sorry, uw browser ondersteunt geen javascript, overweeg een andere browser zoals google chrome!</noscript>
@@ -244,9 +240,7 @@
                 $('.nav-links li a').css("color", "#fff");
             }
             });
-
             //zorgen dat er smooth gescrollt wordt:
-
             $("a").on('click', function(event){
             if (this.hash !== "") {
                 event.preventDefault();
@@ -258,7 +252,6 @@
             });
             }
             });
-
             $("#button").click(function(){
                 $(".gallery").toggleClass("hidden");
             });

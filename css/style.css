@@ -1,5 +1,6 @@
 body{
     font-family: 'Poppins', sans-serif;
+    font-display: swap;
     word-break: break-word;
     background-color: #f4f4f4;
 }
@@ -180,6 +181,7 @@ body{
     width: 100%;
     height: auto;
 }
+
 
 #headerContent{
     position: relative;

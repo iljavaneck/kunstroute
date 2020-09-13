@@ -393,7 +393,7 @@ body{
 
 #flyerRight p:nth-child(1){
     color: #fff;
-    font-size: 80px;
+    font-size: 35px;
     font-weight: 600;
     margin: 10vw 0 0 5vw;
 }
@@ -403,7 +403,7 @@ body{
     font-size: 35px;
     font-weight: 600;
     line-height: 40px;
-    margin: 2vw 0 0 5vw;
+    margin: 0vw 0 0 5vw;
 }
 
 #flyerRight h5::selection , #flyerRight p::selection{
@@ -483,6 +483,7 @@ body{
 	margin: 1rem;
     overflow: hidden;
     transition: ease-in-out 0.6s;
+    position: relative;
 }
 
 .gallery-item h6{
@@ -498,9 +499,42 @@ body{
 	transition: transform 400ms ease-out;
 }
 
-.gallery-image:hover {
-	transform: scale(1.05);
+
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 90%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: #1e2334;
 }
+
+.text{
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    max-width: 60%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+
+.text ul li{
+    margin-bottom: 5px;
+    line-height: 18px;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 0.8;
+  }
+
 
 #button{
     color: #1E2334;
@@ -653,9 +687,9 @@ body{
 }
 
 #cta{
-    width: 620px;
     margin: 0 auto;
     margin-top:9vw;
+    text-align: center;
 }
 
 #cta h5{
@@ -918,6 +952,13 @@ body{
     }
 }
 
+@media screen and (max-width: 1160px){
+
+        #whiteLine{
+            margin:3vw 0vw 5vw 5vw;
+        }
+}
+
 @media screen and (max-width: 1120px){
     .nav-links{
         width: 60%;
@@ -936,11 +977,11 @@ body{
     }
 
     #flyerRight p:nth-child(1){
-        margin: 10vw 0 0 2vw;
+        margin: 7vw 0 0 2vw;
     }
     
     #flyerRight h5{
-        margin: 2vw 0 0 2vw;
+        margin: 0vw 0 0 2vw;
     }
     
     #flyerRight p{
@@ -957,7 +998,6 @@ body{
 
     #cta h5{
         font-size: 35px;
-        margin-left: 5vw;
     }
 
     #cta a {
@@ -1072,7 +1112,7 @@ body{
     }
 
     #flyerRight p:nth-child(1){
-        font-size: 60px;
+        font-size: 25px;
         margin-top: 5vw;
     }
 
@@ -1176,7 +1216,6 @@ body{
 
     #cta h5{
         font-size: 30px;
-        margin-left: 10vw;
         padding-bottom: 200px;
     }
 
@@ -1218,6 +1257,19 @@ body{
 	}
 }
 
+@media screen and (max-width: 843px){
+    #flyerRight p:nth-child(1){
+        font-size: 20px;
+        margin-top: 5vw;
+    }
+
+    #flyerRight h5{
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 5px;
+    }
+}
+
 @media screen and (max-width: 840px){
     .box{
     top: 22vh;
@@ -1256,7 +1308,7 @@ body{
 
 @media screen and (max-width: 800px){
     #flyerRight p:nth-child(1){
-        font-size: 50px;
+        font-size: 20px;
         margin-top: 5vw;
     }
 
@@ -1373,7 +1425,7 @@ body{
     }
 
     #flyerRight p:nth-child(1){
-        font-size: 70px;
+        font-size: 30px;
         margin-top: 10vw;
         margin-left: 10%;
     }
@@ -1382,7 +1434,7 @@ body{
         margin-left: 10%;
         font-size: 30px;
         line-height: 32px;
-        margin-top: 3vw;
+        margin-top: 0vw;
     }
 
     #flyerRight p{
@@ -1441,7 +1493,6 @@ body{
     }
 
     #cta h5{
-        margin-left: unset;
         margin-top: 10vw;
     }
 
@@ -1488,7 +1539,7 @@ body{
     }
 
     #flyerRight p:nth-child(1){
-        font-size: 70px;
+        font-size: 30px;
         margin-top: 10vw;
         margin-left: 10%;
     }
@@ -1497,7 +1548,7 @@ body{
         margin-left: 10%;
         font-size: 30px;
         line-height: 32px;
-        margin-top: 3vw;
+        margin-top: 0vw;
     }
 
     #flyerRight p{
@@ -1571,6 +1622,7 @@ body{
         position: absolute;
         width: 90vw;
         margin-left: 5%;
+        font-size: 25px;
     }
 
     #cta a{
@@ -1684,7 +1736,7 @@ body{
     }
 
     #cta h5{
-        font-size: 25px;
+        font-size: 22px;
     }
 }
 
@@ -1814,6 +1866,7 @@ body{
 
     #cta h5{
         margin-top: 15vw;
+        font-size: 20px;
     }
 
     #cta a {
@@ -1898,6 +1951,10 @@ body{
 
     #cta a{
         width: 40%;
+    }
+
+    #cta h5{
+        font-size: 18px;
     }
 
     #bottom p{

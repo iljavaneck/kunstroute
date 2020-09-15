@@ -487,8 +487,8 @@ body{
 }
 
 .gallery-item h6{
-    padding: 10px 15px;
-    
+    padding: 10px 0px;
+    font-size: 14px;
 }
 
 .gallery-image {
@@ -560,6 +560,11 @@ body{
     transition: ease-in-out 0.6s;
     opacity: 0;
     height: 0;
+}
+
+.gallery.hidden + #button{
+    position: absolute;
+    margin-top: -20vh;
 }
 
 
@@ -1138,6 +1143,10 @@ body{
         margin-left: 20%;
     }
 
+    .gallery-image {
+        height: 90%;
+    }
+
 }
 
 @media screen and (max-width: 950px){
@@ -1514,6 +1523,7 @@ body{
     #navigeer,  #contact , #volg{
         margin-top: 7vh;
     }
+
 }
 
 @media screen and (max-width: 700px){
@@ -1881,16 +1891,13 @@ body{
         height: 0;
     }
 
-    #button{
+    .gallery.hidden + #button{
         position: absolute;
+        margin-top: -800px;
     }
 
-    .gallery.hidden ~  #button{
-        margin-top: -40vw;
-    }
-
-    .gallery:not([hidden]) ~ #over{
-        margin-top: 120px;
+    .gallery.hidden ~ #over {
+        margin-top: -600px;
     }
 
     #overRight{
